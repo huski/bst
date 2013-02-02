@@ -18,14 +18,14 @@ void BinarySearchTree::destroy(Node *node) {
     delete node;
 }
 
-void BinarySearchTree::remove(Node *node, Node * parent) {
+void BinarySearchTree::remove(Node *node, Node *parent) {
     if (node == NULL) {
         return;
     }
     if (node->left != NULL && node->right != NULL) {
         // 2 children - get the left most value from the right child's side
-        Node* leftMostParent = node;
-        Node* leftMost = node->right;
+        Node *leftMostParent = node;
+        Node *leftMost = node->right;
         while (leftMost->left != NULL) {
             leftMostParent = leftMost;
             leftMost = leftMost->left;
